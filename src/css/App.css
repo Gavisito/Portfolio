@@ -58,6 +58,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  color: black;
   margin-top: 0.5rem;
 }
 .landing .landingContent button:hover {
@@ -580,6 +581,7 @@
   width: min-content;
   border-radius: 5px;
   text-wrap: nowrap;
+  color: black;
 }
 .contact .contactDetails form fieldset button:hover {
   cursor: pointer;
@@ -629,10 +631,6 @@
 .contact .contactDetails .socials ul li a:hover {
   background-color: #ffd828;
   cursor: pointer;
-}
-
-footer {
-  background-color: #f0f0f0;
 }
 
 @media screen and (max-width: 900px) {

@@ -62,6 +62,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            color: black;
             margin-top: 0.5rem;
 
             &:hover {
@@ -623,6 +624,7 @@
                     width: min-content;
                     border-radius: 5px;
                     text-wrap: nowrap;
+                    color: black;
                     &:hover {
                         cursor: pointer;
                         background-color: #9a9a9a;
@@ -678,10 +680,6 @@
             }
         }
     }
-}
-
-footer {
-    background-color: #f0f0f0;
 }
 
 @media screen and (max-width: 900px) {
