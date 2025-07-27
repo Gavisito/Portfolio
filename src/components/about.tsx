@@ -72,7 +72,7 @@ export default function About() {
             <p>Here are some common questions I get asked about my work and background.</p>
             <details>
               <summary>Who am I?</summary>
-              <h4>Here are some facts and interets about me</h4>
+              <h4>Here are some facts and interests about me</h4>
               <ul>
                 <li>Im Salvadoran 🇸🇻</li>
                 <li>I love Lego</li>

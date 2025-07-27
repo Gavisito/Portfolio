@@ -2,8 +2,8 @@
   {
     "id": 1,
     "title": "Dreamers' Mothers in Action",
-    "purpose": "In this project, I was tasked to lead and plan improvmments of their business workflows: Event Management System, Community Outreach System and redesign and integrate solution into ther website.",
-    "features": "Some noteable features from this projects is integrating Eventbrite API and Google Calendar API onto their website to display upcoming dates for the community; Integrated Sender and Zapier into the Wix website to automate newsletter capabilites; and improved interactivity of website sections by adding carousels, videos, and more.",
+    "purpose": "In this project, I was tasked to lead and plan improvements of their business workflows: Event Management System, Community Outreach System and redesign and integrate solution into their website.",
+    "features": "Some notable features from this projects is integrating Eventbrite API and Google Calendar API onto their website to display upcoming dates for the community; Integrated Sender and Zapier into the Wix website to automate newsletter capabilities; and improved interactivity of website sections by adding carousels, videos, and more.",
     "results": "As a result of the project, site traffic and session duration increased; Lowered time and operational costs; and reduced tedious, manual promotion, staffing, and attendee tracking",
     "image": "/images/DMIA.png",
     "technologies": ["Wix Velo", "JavaScript", "Chart.js", "HTML5", "CSS3", "Sender", "Zapier", "Eventbrite", "FullCalendar.js"]
