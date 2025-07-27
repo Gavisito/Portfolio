@@ -15,9 +15,9 @@ export default function About() {
   const faqIsInView = useInView(faqRef, { once: true });
 
   return (
-    <article className="about" id='about'>
+    <section className="about" id='about'>
       <h2>About Me</h2>
-      <section>
+      <div className="aboutContent">
         <div className="aboutImages">
           <div className='carousel'>
               <figure>
@@ -39,29 +39,32 @@ export default function About() {
           </div>
         </div>
         <div className="aboutDetails">
-          <motion.div ref={aboutRef}
+          <motion.section ref={aboutRef}
             initial={{ opacity: 0, y: 20 }}
             animate={aboutIsInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.75, ease: 'easeInOut' }}>
-            <h3>Introduction</h3>
-            <p>My name is Anthony, but like to go by Gavi. Im a Front-End focused Developer with Back-End capabilities.</p>
-            <p>I graduated from George Mason University with a Bachelor degree in Information Technology with a dual concentration in 
-              Database Programming and Web Application Development.
-            </p>
-            <p>
-              During my time at George Mason University, I have taken courses that have developed my interest and knowledge in Front End Development,
-               UI / UX Design, Website Development, and related expertise. I have also had the opportunity to work on various projects that have allowed me to apply my skills in real-world scenarios.
-            </p>
+            <section>
+               <h3>Introduction</h3>
+              <p>My name is Anthony, but like to go by Gavi. Im a Front-End focused Developer with Back-End capabilities.</p>
+              <p>I graduated from George Mason University with a Bachelor degree in Information Technology with a dual concentration in 
+                Database Programming and Web Application Development.
+              </p>
+              <p>
+                During my time at George Mason University, I have taken courses that have developed my interest and knowledge in Front End Development,
+                UI / UX Design, Website Development, and related expertise. I have also had the opportunity to work on various projects that have allowed me to apply my skills in real-world scenarios.
+              </p>
 
-
-            <h3>Mission Statement</h3>
-            <p>My mission for the industry is creating user friendly interface that not only look amazing,
-               but make the application easily accessible to those with specific needs to rightfully experience it as intended.</p>
-            <p>Additionally, I would love to work on projects that have an humanitarian aspect to them such as Non-Profit 
-              Organizations and / or Mom and Pop shops as a way to give back to the community.</p>
-          </motion.div>
+            </section>
+            <section>
+                <h3>Mission Statement</h3>
+                <p>My mission for the industry is creating user friendly interface that not only look amazing,
+                  but make the application easily accessible to those with specific needs to rightfully experience it as intended.</p>
+                <p>Additionally, I would love to work on projects that have an humanitarian aspect to them such as Non-Profit 
+                  Organizations and / or Mom and Pop shops as a way to give back to the community.</p>
+            </section>
+          </motion.section>
           <hr style={{ margin: "2rem 0", color: "#ffd828" }} />
-          <motion.div ref={faqRef}
+          <motion.section ref={faqRef}
             initial={{ opacity: 0, y: 20 }}
             animate={faqIsInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 1, ease: 'easeInOut' }}>
@@ -105,9 +108,9 @@ export default function About() {
                 <li>LinkedIn: <a href="https://www.linkedin.com/in/agavivasq/">agavivasq</a></li>
               </ul>
             </details>
-          </motion.div>
+          </motion.section>
         </div>
-      </section>
-    </article>
+      </div>
+    </section>
   )
 }

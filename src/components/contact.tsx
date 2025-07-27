@@ -30,10 +30,10 @@ export default function Contact() {
   };
 
   return (
-    <article className="contact">
+    <section className="contact">
       <h2>Contact Me</h2>
       <p>If you would like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
-      <section className="contactDetails">
+      <div className="contactDetails">
         <form onSubmit={onSubmit} className="contactForm">
           <input type="hidden" name="access_key" value="3c94139f-95df-4ee7-ab36-e61cbdea1c28"></input>
           <input type="hidden" name="from_name" value="Agavivasq Portfolio"></input>
@@ -55,15 +55,15 @@ export default function Contact() {
             <span>{result}</span>
           </fieldset>
         </form>
-        <section className="socials">
+        <nav className="socials">
           <ul className="social-links">
             <li><a href="https://www.linkedin.com/in/agavivasq/" target="_blank" rel="noopener noreferrer"> <FaLinkedinIn className="logo"/> </a></li>
             <li><a href="https://github.com/Gavisito" target="_blank" rel="noopener noreferrer"> <FaGithub className="logo"/> </a></li>
             <li><a href="mailto:agavivasq@gmail.com" target="_blank" rel="noopener noreferrer"> <SiGmail className="logo"/> </a></li>
             <li><a href="/resume.pdf" target="_blank" rel="noopener noreferrer"> <GrDocumentCsv className="logo"/> </a></li>
           </ul>
-        </section>
-      </section>
-    </article>
+        </nav>
+      </div>
+    </section>
   )
 }

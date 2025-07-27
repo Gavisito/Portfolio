@@ -13,7 +13,7 @@ export default function Testimonial() {
             animate={isInView ? { x: "0px" } : {}}
             transition={{ duration: 0.8 }}
         >Testimonial</motion.h2>
-      <motion.section className="testimonialContent"
+      <motion.div className="testimonialContent"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.75 }}>
@@ -25,7 +25,7 @@ export default function Testimonial() {
             <cite>- Dreamers' Mothers in Action IT Director</cite>
             <FaQuoteLeft className="quoteIcon" />
         </figure>
-      </motion.section>
+      </motion.div>
     </article>
   )
 }

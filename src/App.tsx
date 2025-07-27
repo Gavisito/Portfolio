@@ -6,6 +6,7 @@ import Experience from './components/experience';
 import Skills from './components/skills';
 import Contact from './components/contact';
 import Testimonial from './components/testimonial';
+//import Process from './components/process';
 
 function App() {
   return (

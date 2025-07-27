@@ -41,7 +41,7 @@ export default function Experience() {
   }
 
   return (
-    <article className="experience" id="experience">
+    <div className="experience" id="experience">
       <hr />
         <motion.h2
             initial={{ x: "-500px" }}
@@ -93,6 +93,6 @@ export default function Experience() {
           <button onClick={() => getProjectDetails(5)}>Learn More</button>
         </motion.div>
       </section>
-    </article>
+    </div>
   )
 }

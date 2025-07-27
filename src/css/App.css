@@ -32,27 +32,27 @@
   animation-delay: 0.5s;
 }
 .landing .landingContent h1 {
-  font-size: 3rem;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.landing .landingContent h2 {
+  font-size: 2.5rem;
   margin: 0;
   color: #ef562c;
 }
-.landing .landingContent h2 {
-  font-size: 2rem;
-  margin: 0;
-}
 .landing .landingContent h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 0;
   color: #182799;
 }
 .landing .landingContent p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 1rem 0;
 }
 .landing .landingContent button {
   width: -moz-fit-content;
   width: fit-content;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   background-color: #ffd828;
   border: none;
   border-radius: 5px;
@@ -80,31 +80,31 @@
   margin-bottom: 1rem;
   color: #ffd828;
 }
-.about section {
+.about .aboutContent {
   display: flex;
   flex-direction: row;
   gap: 6rem;
   width: 100%;
 }
-.about section .aboutImages {
+.about .aboutContent .aboutImages {
   width: 45%;
   height: auto;
 }
-.about section .aboutImages .carousel {
+.about .aboutContent .aboutImages .carousel {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   row-gap: 2rem;
 }
-.about section .aboutImages figure {
+.about .aboutContent .aboutImages figure {
   width: 45%;
   height: auto;
   transition: transform 0.3s ease;
 }
-.about section .aboutImages figure:hover {
+.about .aboutContent .aboutImages figure:hover {
   transform: scale(1.05);
 }
-.about section .aboutImages img {
+.about .aboutContent .aboutImages img {
   width: 100%;
   height: 280px;
   -o-object-fit: cover;
@@ -112,42 +112,41 @@
   padding: 0.3rem;
   background-color: #ffffff;
 }
-.about section .aboutImages figcaption {
+.about .aboutContent .aboutImages figcaption {
   margin-top: 0.5rem;
   font-style: italic;
   color: rgba(255, 216, 40, 0.7411764706);
 }
-.about section .aboutDetails {
+.about .aboutContent .aboutDetails {
   width: 60%;
   display: flex;
   flex-direction: column;
 }
-.about section .aboutDetails div {
+.about .aboutContent .aboutDetails section {
   margin-bottom: 0.5rem;
-  padding: 1rem;
   border-radius: 5px;
 }
-.about section .aboutDetails div h3 {
+.about .aboutContent .aboutDetails section h3 {
   margin-top: 0;
   font-size: 1.6rem;
   color: #ffd828;
 }
-.about section .aboutDetails div p {
+.about .aboutContent .aboutDetails section p {
   margin: 1rem 0;
   line-height: 1.5;
   color: #ffffff;
   font-size: 1.1rem;
 }
-.about section .aboutDetails div ul {
+.about .aboutContent .aboutDetails section ul {
   list-style-type: disc;
   padding-left: 1.5rem;
   margin: 0.5rem 0;
   color: #ffffff;
 }
-.about section .aboutDetails div ul li {
+.about .aboutContent .aboutDetails section ul li {
   margin-bottom: 0.5rem;
 }
-.about section .aboutDetails details {
+.about .aboutContent .aboutDetails details {
   margin-bottom: 1rem;
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -157,10 +156,10 @@
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
-.about section .aboutDetails details:hover {
+.about .aboutContent .aboutDetails details:hover {
   background-color: #f0f0f0;
 }
-.about section .aboutDetails details summary {
+.about .aboutContent .aboutDetails details summary {
   font-weight: bold;
   cursor: pointer;
   color: #000000;
@@ -169,13 +168,13 @@
   padding-bottom: 0.25rem;
   border-bottom: 1px solid #cccccc;
 }
-.about section .aboutDetails details p {
+.about .aboutContent .aboutDetails details p {
   margin: 0.5rem 0;
   line-height: 1.5;
   color: #333333;
   font-size: 1.1rem;
 }
-.about section .aboutDetails details ul li {
+.about .aboutContent .aboutDetails details ul li {
   color: #000000;
   line-height: 1.5;
 }
@@ -359,6 +358,10 @@
   display: flex;
   flex-direction: column;
 }
+.projectDetails section .details section {
+  display: flex;
+  flex-direction: column;
+}
 .projectDetails section .details p {
   font-size: 1.2rem;
   line-height: 1.5;
@@ -382,6 +385,8 @@
 
 .navigationButtons {
   margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .closeButton, .nextButton, .prevButton {
@@ -420,8 +425,7 @@
   width: 100%;
   height: 125px;
   background-color: #131c34;
-  -webkit-clip-path: polygon(100% -1%, 100% 60%, 0% 10%, 0% -1%);
-          clip-path: polygon(100% -1%, 100% 60%, 0% 10%, 0% -1%);
+  clip-path: polygon(100% -1%, 100% 60%, 0% 10%, 0% -1%);
   z-index: 2;
 }
 .skills h2 {
@@ -659,15 +663,15 @@
     background-color: #ffffff;
     color: #000000;
   }
-  .about section {
+  .about .aboutContent {
     flex-direction: column;
     gap: 2rem;
   }
-  .about section .aboutImages {
+  .about .aboutContent .aboutImages {
     width: 100%;
     height: auto;
   }
-  .about section .aboutImages .carousel {
+  .about .aboutContent .aboutImages .carousel {
     display: flex;
     flex-wrap: wrap;
     pointer-events: none;
@@ -676,14 +680,14 @@
     justify-content: center;
     margin-top: 1.5rem;
   }
-  .about section .aboutImages .carousel figure {
+  .about .aboutContent .aboutImages .carousel figure {
     width: 44%;
   }
-  .about section .aboutImages .carousel figure img {
+  .about .aboutContent .aboutImages .carousel figure img {
     width: 100%;
     height: 300px;
   }
-  .about section .aboutDetails {
+  .about .aboutContent .aboutDetails {
     width: 100%;
   }
   .projectDetails {
@@ -731,15 +735,15 @@
   .about {
     padding: 4rem 1rem;
   }
-  .about section {
+  .about .aboutContent {
     flex-direction: column;
   }
-  .about section .aboutImages {
+  .about .aboutContent .aboutImages {
     width: 100%;
     height: auto;
     overflow: hidden;
   }
-  .about section .aboutImages .carousel {
+  .about .aboutContent .aboutImages .carousel {
     display: flex;
     flex-wrap: nowrap;
     pointer-events: none;
@@ -748,12 +752,12 @@
     animation: scrollAuto 20s linear infinite alternate;
     gap: 1rem;
   }
-  .about section .aboutImages .carousel figure {
+  .about .aboutContent .aboutImages .carousel figure {
     height: auto;
     width: -moz-fit-content;
     width: fit-content;
   }
-  .about section .aboutImages .carousel figure img {
+  .about .aboutContent .aboutImages .carousel figure img {
     width: 400px;
     height: 500px;
     flex-shrink: 0;
@@ -766,7 +770,7 @@
       transform: translateX(-1350px);
     }
   }
-  .about section .aboutDetails {
+  .about .aboutContent .aboutDetails {
     width: 100%;
   }
   .experience section {

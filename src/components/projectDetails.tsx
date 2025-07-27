@@ -28,11 +28,11 @@ export default function ProjectDetails(project: ProjectDetailsProps) {
       key={project.id}
     >
       <hr />
-      <section className="navigationButtons">
+      <nav className="navigationButtons">
         <button className="closeButton" onClick={project.onClose}> <FaRegWindowClose className="icon"/> <span>Close</span> </button>
         <button className="prevButton" onClick={project.onPrevious}> <FaArrowLeft className="icon"/> </button>
         <button className="nextButton" onClick={project.onNext}> <FaArrowRight className="icon"/> </button>
-      </section>
+      </nav>
 
       <h2>{project.title}</h2>
       <section className="projectContent">
@@ -47,21 +47,26 @@ export default function ProjectDetails(project: ProjectDetailsProps) {
           </div>
         </div>
         <div className="details">
-          <h3>Purpose</h3>
-          <p>{project.purpose}</p>
-
-          <h3>Features</h3>
-          <p>{project.features}</p>
-
-          <h3>Results</h3>
-          <p>{project.results}</p>
-
-          <h3>Technologies Used:</h3>
-          <ul className="technologies">
-            {project.technologies.map((tech, index) => (
-              <li key={index}>{tech}</li>
-            ))}
-          </ul>
+          <section>
+              <h3>Purpose</h3>
+              <p>{project.purpose}</p>
+          </section>
+          <section>
+            <h3>Features</h3>
+            <p>{project.features}</p>
+          </section>
+          <section>
+           <h3>Results</h3>
+            <p>{project.results}</p>
+          </section>
+          <section>
+              <h3>Technologies Used:</h3>
+              <ul className="technologies">
+                {project.technologies.map((tech, index) => (
+                  <li key={index}>{tech}</li>
+                ))}
+              </ul>
+          </section>
         </div>
       </section>
       <hr />
