@@ -33,24 +33,24 @@
         animation-delay: 0.5s;
 
         h1 {
-            font-size: 1.5rem;
+            font-size: 2rem;
             margin: 0;
         }
 
         h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin: 0;
             color: #ef562c;
         }
 
         h3 {
-            font-size: 1.25rem;
+            font-size: 1.75rem;
             margin: 0;
             color: #182799;
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             margin: 1rem 0;
         }
         
@@ -162,11 +162,11 @@
             }
             
             details {
-                margin-bottom: 1rem;
+                margin-bottom: 1.5rem;
                 background-color: #ffffff;
                 border: 1px solid #cccccc;
                 border-radius: 5px;
-                padding: 1rem;
+                padding: 1.25rem 1rem;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                 transition: background-color 0.3s ease;
                 cursor: pointer;
@@ -181,7 +181,8 @@
                     color: #000000;
                     font-size: 1.3rem;
                     margin-bottom: 0.5rem;
-                    padding-bottom: 0.25rem;
+                    padding-bottom: 1rem;
+                    
                     border-bottom: 1px solid #cccccc;
 
                    }
