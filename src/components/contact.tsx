@@ -39,14 +39,14 @@ export default function Contact() {
           <input type="hidden" name="from_name" value="Agavivasq Portfolio"></input>
           <fieldset>
             <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name" name="name" placeholder="John Doe" autoComplete="name" inputMode="text" required />
 
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" required />
+            <input type="email" id="email" name="email" placeholder="john.doe@example.com" autoComplete="email" inputMode="email" required />
           </fieldset>
           <fieldset>
             <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message" rows={6} required></textarea>
+            <textarea id="message" name="message" rows={6} placeholder="Apples and bananas!" required></textarea>
           </fieldset>
           <fieldset>
             <button type="submit">Send Message</button>

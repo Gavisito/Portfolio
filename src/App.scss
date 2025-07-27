@@ -206,7 +206,7 @@
 .experience {
     display: flex;
     flex-direction: column;
-    padding: 2rem 1.5rem;
+    padding: 4rem 1.5rem;
     color: #ffffff;
     width: 100%;
     height: fit-content;
@@ -216,6 +216,7 @@
     h2 {
         font-size: 3em;
         margin-bottom: 1rem;
+        margin-top: 2rem;
         color: #000000;
     }
     section {
@@ -322,7 +323,7 @@
 }
 
 .projectDetails {
-    padding: 2rem 1.5rem;
+    padding: 4rem 1.5rem;
     color: #000000;
     height: fit-content;
     width: 100%;
@@ -343,6 +344,7 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        
         .projectImage {
             width: 45%;
             height: auto;
@@ -417,7 +419,7 @@
 
 
 .navigationButtons {
-    margin-top: 3rem;
+    margin-top: 6rem;
     display: flex;
     justify-content: space-between;
 }
@@ -464,7 +466,7 @@
 
     h2 {
         font-size: 3em;
-        margin-top: 2rem;
+        margin-top: 8rem;
         margin-bottom: 0.5rem;
         color: #000000;
     }
@@ -689,9 +691,73 @@
     }
 }
 
-@media screen and (max-width: 900px) {
-    .experience {
+.process {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    padding: 0 1.5rem;
+
+    .processHeader {
+        display: flex;
+        align-items: center;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        h2 {
+            font-size: 2.5rem;
+            color: #000000; 
+        }
+        p {
+            font-size: 1.25rem;
+            color: #333333;
+        }
+
+
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
         section {
+            margin-bottom: 2rem;
+            
+            h3 {
+                font-size: 2rem;
+                color: #000000;
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: 1.2rem;
+                color: #333333;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .skills {
+        h2 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+        ul {
+            li {
+                font-size: 1rem;
+                padding: 0.5rem 0.75rem;
+            }
+        }
+    }
+    .experience {
+        h2 {
+            font-size: 2.5rem;
+        }
+        section {
+            grid-template-columns: 10fr 7fr;
+            grid-template-rows: 2fr 2fr 3fr;
             div {
                 h3, button {
                     visibility: visible;
@@ -699,14 +765,14 @@
                 }
 
                 h3 {
-                    font-size: 1.75rem;
+                    font-size: 1.5rem;
                     margin-bottom: 0.5rem;
                     font-weight: bold;
                     color: #dedede;
                 }
 
                 button {
-                    padding: 0.5rem 1rem;
+                    padding: 0.5rem 0.75rem;
                     background-color: transparent;
                     border: 2px solid #ffffff;
                     border-radius: 5px;
@@ -726,6 +792,9 @@
     }
 
     .about {
+        h2 {
+            font-size: 2.5rem;
+        }
         .aboutContent {
             flex-direction: column;
             gap: 2rem;
@@ -757,6 +826,77 @@
 
             .aboutDetails {
                 width: 100%;
+                section {
+                    h3 {
+                        font-size: 1.75rem;
+                    }
+                    p {
+                        font-size: 1.1rem;
+                    }
+                    ul {
+                        li {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .testimonial {
+        h2 {
+            font-size: 2.5rem;
+        }
+        
+        .testimonialContent {
+            .testimonialItem {
+                padding: 2rem 1.5rem;
+
+                q {
+                    font-size: 1.1rem;
+                }
+            }
+
+            .quoteIcon {
+                width: 50px;
+                height: 50px;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .contact {
+        h2 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+        .contactDetails {
+            flex-direction: column;
+            form {
+                width: 100%;
+            }
+            .socials {
+                width: 100%;
+                ul {
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 1.5rem;
+                    li {
+                        width: 65px;
+                        height: 65px;
+                        a {
+                            width: 100%;
+                            height: 100%;
+                            padding: 1rem;
+                            .logo {
+                                width: 2rem;
+                                height: 2rem;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -765,6 +905,10 @@
     .projectDetails {
         flex-direction: column;
         padding: 2rem 1rem;
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2.25rem;
+        }
 
         section {
             flex-direction: column;
@@ -776,13 +920,24 @@
 
             .details {
                 width: 100%;
+  
+                p {
+                    font-size: 1.1rem;
+                }
+                h3 {
+                    font-size: 1.5rem;
+                }
+                ul {
+                    li {
+                        font-size: 1rem;
+                    }
+                }
             }
         }
 
         .navigationButtons {
             flex-direction: row;
             justify-content: space-between;
-            margin-top: 2rem;
         }
     }
 }
@@ -802,11 +957,19 @@
             padding: 5rem 1.5rem;
 
             h1 {
+                font-size: 1.25rem;
+            }
+
+            h2 {
                 font-size: 1.75rem;
             }
 
-            h2, h3, p {
-                font-size: 1rem;
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 0.9rem;
             }
 
             button {
@@ -815,9 +978,50 @@
             }
         }
     }
+    
+    .skills {
+        h2 {
+            font-size: 2.25rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+        ul {
+            li {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+    }
+
+    .testimonial {
+        h2 {
+            font-size: 2.25rem;
+        }
+        
+        .testimonialContent {
+            .testimonialItem {
+                padding: 2rem 1rem;
+
+                q {
+                    font-size: 1rem;
+                }
+            }
+
+            .quoteIcon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+        }
+    }
 
     .about {
         padding: 4rem 1rem;
+
+        h2 {
+            font-size: 2.25rem;
+        }
         .aboutContent {
             flex-direction: column;
 
@@ -859,14 +1063,36 @@
 
             .aboutDetails {
                 width: 100%;
+                section {
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+                    p {
+                        font-size: 1rem;
+                    }
+                    ul {
+                        li {
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
             }
         }
     }
     .experience {
+        h2 {
+            font-size: 2.25rem;
+        }
         section {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(5, auto);
             gap: 1rem;
+
+            div {
+                h3 {
+                    font-size: 1.5rem;
+                }
+            }
 
             .item5 {
                 grid-column: span 1;
@@ -875,6 +1101,9 @@
     }
 
     .projectDetails {
+        h2 {
+            font-size: 2rem;
+        }
         section {
             flex-direction: column;
 
@@ -889,6 +1118,17 @@
 
             .details {
                 width: 100%;
+                p {
+                    font-size: 1rem;
+                }
+                h3 {
+                    font-size: 1.5rem;
+                }
+                ul {
+                    li {
+                        font-size: 0.9rem;
+                    }
+                }
             }
         }
         .navigationButtons {
@@ -898,6 +1138,12 @@
         }
     }
     .contact {
+        h2 {
+            font-size: 2.25rem;
+        }
+        p {
+            font-size: 1rem;
+        }
         .contactDetails {
             flex-direction: column;
             form {

@@ -12,7 +12,7 @@ export default function Testimonial() {
             initial={{ x: "-400px" }}
             animate={isInView ? { x: "0px" } : {}}
             transition={{ duration: 0.8 }}
-        >Testimonial</motion.h2>
+        >Word on the Street</motion.h2>
       <motion.div className="testimonialContent"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}

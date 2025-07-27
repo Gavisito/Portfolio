@@ -2,8 +2,9 @@
 export default function Process() {
   return (
     <section className="process">
-      <h2>My Process</h2>
-      <p>Here's how I approach projects, from initial concept to final delivery.</p>
+      <div className="processHeader">
+        <h2>How I Work</h2>
+      </div>
       <div className="details">
         <section>
           <h3>1. Research & Planning</h3>

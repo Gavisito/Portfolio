@@ -182,7 +182,7 @@
 .experience {
   display: flex;
   flex-direction: column;
-  padding: 2rem 1.5rem;
+  padding: 4rem 1.5rem;
   color: #ffffff;
   width: 100%;
   height: -moz-fit-content;
@@ -194,6 +194,7 @@
 .experience h2 {
   font-size: 3em;
   margin-bottom: 1rem;
+  margin-top: 2rem;
   color: #000000;
 }
 .experience section {
@@ -298,7 +299,7 @@
 }
 
 .projectDetails {
-  padding: 2rem 1.5rem;
+  padding: 4rem 1.5rem;
   color: #000000;
   height: -moz-fit-content;
   height: fit-content;
@@ -384,7 +385,7 @@
 }
 
 .navigationButtons {
-  margin-top: 3rem;
+  margin-top: 6rem;
   display: flex;
   justify-content: space-between;
 }
@@ -430,7 +431,7 @@
 }
 .skills h2 {
   font-size: 3em;
-  margin-top: 2rem;
+  margin-top: 8rem;
   margin-bottom: 0.5rem;
   color: #000000;
 }
@@ -637,19 +638,76 @@
   cursor: pointer;
 }
 
+.process {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 1.5rem;
+}
+.process .processHeader {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+.process .processHeader h2 {
+  font-size: 2.5rem;
+  color: #000000;
+}
+.process .processHeader p {
+  font-size: 1.25rem;
+  color: #333333;
+}
+.process .details {
+  display: flex;
+  flex-direction: column;
+}
+.process .details section {
+  margin-bottom: 2rem;
+}
+.process .details section h3 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+.process .details section p {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 900px) {
+  .skills h2 {
+    font-size: 2.5rem;
+  }
+  .skills p {
+    font-size: 1.1rem;
+  }
+  .skills ul li {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+  .experience h2 {
+    font-size: 2.5rem;
+  }
+  .experience section {
+    grid-template-columns: 10fr 7fr;
+    grid-template-rows: 2fr 2fr 3fr;
+  }
   .experience section div h3, .experience section div button {
     visibility: visible;
     z-index: 2;
   }
   .experience section div h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
     color: #dedede;
   }
   .experience section div button {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
     background-color: transparent;
     border: 2px solid #ffffff;
     border-radius: 5px;
@@ -662,6 +720,9 @@
   .experience section div button:hover {
     background-color: #ffffff;
     color: #000000;
+  }
+  .about h2 {
+    font-size: 2.5rem;
   }
   .about .aboutContent {
     flex-direction: column;
@@ -690,9 +751,69 @@
   .about .aboutContent .aboutDetails {
     width: 100%;
   }
+  .about .aboutContent .aboutDetails section h3 {
+    font-size: 1.75rem;
+  }
+  .about .aboutContent .aboutDetails section p {
+    font-size: 1.1rem;
+  }
+  .about .aboutContent .aboutDetails section ul li {
+    font-size: 1rem;
+  }
+  .testimonial h2 {
+    font-size: 2.5rem;
+  }
+  .testimonial .testimonialContent .testimonialItem {
+    padding: 2rem 1.5rem;
+  }
+  .testimonial .testimonialContent .testimonialItem q {
+    font-size: 1.1rem;
+  }
+  .testimonial .testimonialContent .quoteIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+  .contact h2 {
+    font-size: 2.5rem;
+  }
+  .contact p {
+    font-size: 1.1rem;
+  }
+  .contact .contactDetails {
+    flex-direction: column;
+  }
+  .contact .contactDetails form {
+    width: 100%;
+  }
+  .contact .contactDetails .socials {
+    width: 100%;
+  }
+  .contact .contactDetails .socials ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .contact .contactDetails .socials ul li {
+    width: 65px;
+    height: 65px;
+  }
+  .contact .contactDetails .socials ul li a {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .contact .contactDetails .socials ul li a .logo {
+    width: 2rem;
+    height: 2rem;
+  }
   .projectDetails {
     flex-direction: column;
     padding: 2rem 1rem;
+  }
+  .projectDetails h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.25rem;
   }
   .projectDetails section {
     flex-direction: column;
@@ -704,10 +825,18 @@
   .projectDetails section .details {
     width: 100%;
   }
+  .projectDetails section .details p {
+    font-size: 1.1rem;
+  }
+  .projectDetails section .details h3 {
+    font-size: 1.5rem;
+  }
+  .projectDetails section .details ul li {
+    font-size: 1rem;
+  }
   .projectDetails .navigationButtons {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 2rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -723,17 +852,50 @@
     padding: 5rem 1.5rem;
   }
   .landing .landingContent h1 {
+    font-size: 1.25rem;
+  }
+  .landing .landingContent h2 {
     font-size: 1.75rem;
   }
-  .landing .landingContent h2, .landing .landingContent h3, .landing .landingContent p {
-    font-size: 1rem;
+  .landing .landingContent h3 {
+    font-size: 1.1rem;
+  }
+  .landing .landingContent p {
+    font-size: 0.9rem;
   }
   .landing .landingContent button {
     padding: 0.5rem 1rem;
     font-size: 14px;
   }
+  .skills h2 {
+    font-size: 2.25rem;
+  }
+  .skills p {
+    font-size: 1rem;
+  }
+  .skills ul li {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  .testimonial h2 {
+    font-size: 2.25rem;
+  }
+  .testimonial .testimonialContent .testimonialItem {
+    padding: 2rem 1rem;
+  }
+  .testimonial .testimonialContent .testimonialItem q {
+    font-size: 1rem;
+  }
+  .testimonial .testimonialContent .quoteIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
   .about {
     padding: 4rem 1rem;
+  }
+  .about h2 {
+    font-size: 2.25rem;
   }
   .about .aboutContent {
     flex-direction: column;
@@ -773,13 +935,31 @@
   .about .aboutContent .aboutDetails {
     width: 100%;
   }
+  .about .aboutContent .aboutDetails section h3 {
+    font-size: 1.5rem;
+  }
+  .about .aboutContent .aboutDetails section p {
+    font-size: 1rem;
+  }
+  .about .aboutContent .aboutDetails section ul li {
+    font-size: 0.9rem;
+  }
+  .experience h2 {
+    font-size: 2.25rem;
+  }
   .experience section {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto);
     gap: 1rem;
   }
+  .experience section div h3 {
+    font-size: 1.5rem;
+  }
   .experience section .item5 {
     grid-column: span 1;
+  }
+  .projectDetails h2 {
+    font-size: 2rem;
   }
   .projectDetails section {
     flex-direction: column;
@@ -796,10 +976,25 @@
   .projectDetails section .details {
     width: 100%;
   }
+  .projectDetails section .details p {
+    font-size: 1rem;
+  }
+  .projectDetails section .details h3 {
+    font-size: 1.5rem;
+  }
+  .projectDetails section .details ul li {
+    font-size: 0.9rem;
+  }
   .projectDetails .navigationButtons {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 1.75rem;
+  }
+  .contact h2 {
+    font-size: 2.25rem;
+  }
+  .contact p {
+    font-size: 1rem;
   }
   .contact .contactDetails {
     flex-direction: column;

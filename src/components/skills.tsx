@@ -22,7 +22,7 @@ export default function Skills() {
                 initial={{ x: "-300px" }}
                 animate={isInView ? { x: "0px" } : {}}
                 transition={{ duration: 1.1 }}
-            >Skills</motion.h2>
+            >My Skills</motion.h2>
 
             <motion.p
                 initial={{ x: "-800px" }}

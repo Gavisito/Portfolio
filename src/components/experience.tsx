@@ -47,7 +47,7 @@ export default function Experience() {
             initial={{ x: "-500px" }}
             animate={isInView ? { x: "0px" } : {}}
             transition={{ duration: 0.8 }}
-        >Projects</motion.h2>
+        >My Projects</motion.h2>
       <section className="expGrid"  ref={ref}>
         <motion.div className="item1"
           initial= {{scale: 0.8}}
