@@ -29,13 +29,16 @@ export default function Experience() {
   }}
 
   if (project) {
+    const numProjects = Project.length
+    const currentIndex = Project.findIndex((p) => p.id === project.id);
+    
     return (
       <ProjectDetails
         {...project}
         links={project.links || []}
         onClose={() => setProject(null)}
-        onNext={() => getProjectDetails(project.id + 1)}
-        onPrevious={() => getProjectDetails(project.id - 1)}
+        onNext={() => getProjectDetails(Project[((currentIndex + 1) % numProjects)].id)}
+        onPrevious={() => getProjectDetails(Project[((currentIndex - 1 + numProjects ) % numProjects)].id)}
       />
     );
   }
