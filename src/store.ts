@@ -2,14 +2,14 @@ import {create} from "zustand"
 import Project from "./data/projects.json";
 
 interface Project {
-  id: number;
-  title: string;
-  purpose: string;
-  features: string;
-  results: string
-  image: string;
-  links: { name: string; url: string }[] | undefined;
-  technologies: string[];
+	id: number;
+	title: string;
+	purpose: string;
+	features: string;
+	results: string
+	image: string;
+	links: { name: string; url: string }[] | undefined;
+	technologies: string[];
 }
 
 interface GalleryState {

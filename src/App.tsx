@@ -9,19 +9,19 @@ import Testimonial from './components/testimonial';
 //import Process from './components/process';
 
 function App() {
-  return (
-    <>
-      <main>
-          <Landing/>
-          <About/>
-          <Skills/>
-          <Experience/>
-          {/**<Process/>**/}
-          <Testimonial/>
-          <Contact/>
-      </main>
-    </>
-  )
+	return (
+		<>
+			<main>
+				<Landing/>
+				<About/>
+				<Skills/>
+				<Experience/>
+				{/**<Process/>**/}
+				<Testimonial/>
+				<Contact/>
+			</main>
+		</>
+	)
 }
 
 export default App

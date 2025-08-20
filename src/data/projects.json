@@ -1,77 +1,77 @@
 [
-  {
-    "id": 1,
-    "title": "Dreamers' Mothers in Action",
-    "purpose": "In this project, I was tasked to lead and plan improvements of their business workflows: Event Management System, Community Outreach System and redesign and integrate solution into their website.",
-    "features": "Some notable features from this projects is integrating Eventbrite API and Google Calendar API onto their website to display upcoming dates for the community; Integrated Sender and Zapier into the Wix website to automate newsletter capabilities; and improved interactivity of website sections by adding carousels, videos, and more.",
-    "results": "As a result of the project, site traffic and session duration increased; Lowered time and operational costs; and reduced tedious, manual promotion, staffing, and attendee tracking",
-    "image": "/images/DMIA.png",
-    "technologies": ["Wix Velo", "JavaScript", "Chart.js", "HTML5", "CSS3", "Sender", "Zapier", "Eventbrite", "FullCalendar.js"]
-  },
-  {
-    "id": 2,
-    "title": "Lunita Hermosa",
-    "purpose": "My primary focus was to create a website that had responsive website design, be able to create common website component such as menu slider, filtering, and more. Additionally, familiarize with xmlhttprequest, ajax, jquery, and more.",
-    "features": "Some interactive features include filtering, carousel, form validation, data persistence using browser local storage, CSS animations, and CSS Illustrations.",
-    "results": "I successfully learned how to conduct DOM manipulation through the interactive features mentioned, which allowed exposure to foundatinal skills in web development.",
-    "image": "/images/LHW.png",
-    "links": [
-      {
-        "name": "Project Demo",
-        "url": "https://gavisito.github.io/LRRedesign/"
-      },
-      {
-        "name": "GitHub",
-        "url": "https://github.com/Gavisito/LRRedesign"
-      }
-    ],
-    "technologies": ["HTML5", "CSS3", "Sass", "JavaScript", "XMLHttpRequest", "AJAX", "jQuery"]
-  },
-  {
-    "id": 3,
-    "title": "CSS Art",
-    "purpose": "This project was a personal challenge to explore CSS capabilities beyond traditional web design and understanding CSS properties for artistic expression.",
-    "features": "The artwork features intricate shapes, demonstrating the capabilities of CSS for creating complex designs without images.",
-    "results": "The project resulted in a visually appealing piece of art that highlights the potential of CSS for creative expression, serving as a portfolio piece and inspiration for future projects.",
-    "image": "/images/Stitch.png",
-    "links": [
-      {
-        "name": "CodePen Projects",
-        "url": "https://codepen.io/Gavisito"
-      },
-      {
-        "name": "GitHub",
-        "url": "https://github.com/Gavisito/stitchART"
-      }
-    ],
-    "technologies": ["HTML", "CSS"]
-  },
-  {
-    "id": 4,
-    "title": "Logo Generator",
-    "purpose": "A collaborative flask application created for IT-390 course at George Mason University. The purpose of this application was to solve for the speed up the brainstorming process of logo creation and mockups. It utilizes OpenAI's DALL-E API to generate these logos.",
-    "features": "Key features include user input for logo specifications, integration with OpenAI's DALL-E API for image generation, and a user-friendly interface for viewing and downloading generated logos.",
-    "results": "The tools provided a streamlined process for logo creation, allowing users to quickly generate and iterate on design ideas. It demonstrated the power of AI in creative applications and provided a practical solution for designers.",
-    "image": "/images/LGH.png",
-    "technologies": ["HTML5", "CSS3", "Python", "Flask", "Google Cloud Platform", "OpenAI API"]
-  },
-  {
-    "id": 5,
-    "title": "Expense Tracking Application",
-    "purpose": "The goal was to create a full-stack web application that allows users to track their expenses and visualize spending patterns.",
-    "features": "Key features include expense categorization, data visualization using Chart.js, responsive UI listing view options, Clerk based authentication/authorization, and searchable modal with multiple filters to find specific expenses or categories.",
-    "results": "This was a great project to learn about full-stack development, including backend API development, database management, and frontend design. It provided hands-on experience with Next.js, Clerk for authentication, and Chart.js for data visualization. Additionally, it provided a practical solution for personal finance management in tracking Uber-related expenses to reduce cross-checking to prepare for taxes.",
-    "image": "/images/EMT.png",
-    "links": [
-      {
-        "name": "Project Demo",
-        "url": "https://countn-cash.vercel.app/"
-      },
-      {
-        "name": "GitHub",
-        "url": "https://github.com/Gavisito/CountnCash"
-      }
-    ],
-    "technologies": ["Next.js", "RESTful API", "React", "TypeScript", "Clerk", "MongoDB", "Chart.js", "Tailwind CSS"]
-  }
+	{
+		"id": 1,
+		"title": "Dreamers' Mothers in Action",
+		"purpose": "In this project, I was tasked to lead and plan improvements of their business workflows: Event Management System, Community Outreach System and redesign and integrate solution into their website.",
+		"features": "Some notable features from this projects is integrating Eventbrite API and Google Calendar API onto their website to display upcoming dates for the community; Integrated Sender and Zapier into the Wix website to automate newsletter capabilities; and improved interactivity of website sections by adding carousels, videos, and more.",
+		"results": "As a result of the project, site traffic and session duration increased; Lowered time and operational costs; and reduced tedious, manual promotion, staffing, and attendee tracking",
+		"image": "/images/DMIA.png",
+		"technologies": ["Wix Velo", "JavaScript", "Chart.js", "HTML5", "CSS3", "Sender", "Zapier", "Eventbrite", "FullCalendar.js"]
+	},
+	{
+		"id": 2,
+		"title": "Lunita Hermosa",
+		"purpose": "My primary focus was to create a website that had responsive website design, be able to create common website component such as menu slider, filtering, and more. Additionally, familiarize with xmlhttprequest, ajax, jquery, and more.",
+		"features": "Some interactive features include filtering, carousel, form validation, data persistence using browser local storage, CSS animations, and CSS Illustrations.",
+		"results": "I successfully learned how to conduct DOM manipulation through the interactive features mentioned, which allowed exposure to foundatinal skills in web development.",
+		"image": "/images/LHW.png",
+		"links": [
+		{
+			"name": "Project Demo",
+			"url": "https://gavisito.github.io/LRRedesign/"
+		},
+		{
+			"name": "GitHub",
+			"url": "https://github.com/Gavisito/LRRedesign"
+		}
+		],
+		"technologies": ["HTML5", "CSS3", "Sass", "JavaScript", "XMLHttpRequest", "AJAX", "jQuery"]
+	},
+	{
+		"id": 3,
+		"title": "CSS Art",
+		"purpose": "This project was a personal challenge to explore CSS capabilities beyond traditional web design and understanding CSS properties for artistic expression.",
+		"features": "The artwork features intricate shapes, demonstrating the capabilities of CSS for creating complex designs without images.",
+		"results": "The project resulted in a visually appealing piece of art that highlights the potential of CSS for creative expression, serving as a portfolio piece and inspiration for future projects.",
+		"image": "/images/Stitch.png",
+		"links": [
+		{
+			"name": "CodePen Projects",
+			"url": "https://codepen.io/Gavisito"
+		},
+		{
+			"name": "GitHub",
+			"url": "https://github.com/Gavisito/stitchART"
+		}
+		],
+		"technologies": ["HTML", "CSS"]
+	},
+	{
+		"id": 4,
+		"title": "Logo Generator",
+		"purpose": "A collaborative flask application created for IT-390 course at George Mason University. The purpose of this application was to solve for the speed up the brainstorming process of logo creation and mockups. It utilizes OpenAI's DALL-E API to generate these logos.",
+		"features": "Key features include user input for logo specifications, integration with OpenAI's DALL-E API for image generation, and a user-friendly interface for viewing and downloading generated logos.",
+		"results": "The tools provided a streamlined process for logo creation, allowing users to quickly generate and iterate on design ideas. It demonstrated the power of AI in creative applications and provided a practical solution for designers.",
+		"image": "/images/LGH.png",
+		"technologies": ["HTML5", "CSS3", "Python", "Flask", "Google Cloud Platform", "OpenAI API"]
+	},
+	{
+		"id": 5,
+		"title": "Expense Tracking Application",
+		"purpose": "The goal was to create a full-stack web application that allows users to track their expenses and visualize spending patterns.",
+		"features": "Key features include expense categorization, data visualization using Chart.js, responsive UI listing view options, Clerk based authentication/authorization, and searchable modal with multiple filters to find specific expenses or categories.",
+		"results": "This was a great project to learn about full-stack development, including backend API development, database management, and frontend design. It provided hands-on experience with Next.js, Clerk for authentication, and Chart.js for data visualization. Additionally, it provided a practical solution for personal finance management in tracking Uber-related expenses to reduce cross-checking to prepare for taxes.",
+		"image": "/images/EMT.png",
+		"links": [
+		{
+			"name": "Project Demo",
+			"url": "https://countn-cash.vercel.app/"
+		},
+		{
+			"name": "GitHub",
+			"url": "https://github.com/Gavisito/CountnCash"
+		}
+		],
+		"technologies": ["Next.js", "RESTful API", "React", "TypeScript", "Clerk", "MongoDB", "Chart.js", "Tailwind CSS"]
+	}
 ]
