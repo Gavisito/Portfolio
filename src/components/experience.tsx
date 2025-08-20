@@ -1,101 +1,43 @@
-import {useState} from 'react';
-import Project from '../data/projects.json';
 import ProjectDetails from './projectDetails';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import { useGalleryStore } from '../store';
 
 export default function Experience() { 
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const {projects, project, setProject, onClose, onNext, onPrevious} = useGalleryStore()
 
-  const [project, setProject] = useState<{
-    id: number;
-    title: string;
-    image: string;
-    purpose: string;
-    features: string;
-    results: string;
-    links?: { name: string; url: string }[] | undefined;
-    technologies: string[];
-  } | null>(null);
-
-  const getProjectDetails = (projectId: Number) => {
-    const selectedProject = Project.find((p: { id: Number; }) => p.id === projectId);
-    if (selectedProject) {
-      setProject(selectedProject);
-  
-    } else {
-      console.error('Project not found');
-  }}
-
-  if (project) {
-    const numProjects = Project.length
-    const currentIndex = Project.findIndex((p) => p.id === project.id);
-    
+  if (project) {    
     return (
       <ProjectDetails
         {...project}
         links={project.links || []}
-        onClose={() => setProject(null)}
-        onNext={() => getProjectDetails(Project[((currentIndex + 1) % numProjects)].id)}
-        onPrevious={() => getProjectDetails(Project[((currentIndex - 1 + numProjects ) % numProjects)].id)}
+        onClose={onClose}
+        onNext={onNext}
+        onPrevious={onPrevious}
       />
     );
+  }
+
+  const listVariant = {
+      hidden: {opacity: 0},
+      visible: {opacity: 1}
   }
 
   return (
     <div className="experience" id="experience">
       <hr />
-        <motion.h2
-            initial={{ x: "-500px" }}
-            animate={isInView ? { x: "0px" } : {}}
-            transition={{ duration: 0.8 }}
-        >My Projects</motion.h2>
-      <section className="expGrid"  ref={ref}>
-        <motion.div className="item1"
-          initial= {{scale: 0.8}}
-          animate={isInView ? { scale: [1, 1.1, 1] } : {}}
-          transition={{ duration: 0.75, delay: 1.75, ease: "easeInOut" }}
-        >
-          <h3>Dreamers' Mothers in Action</h3>
-          <button onClick={() => getProjectDetails(1)}>Learn More</button>
-        </motion.div>
-        <motion.div className="item2"
-          initial= {{scale: 0.8}}
-          animate={isInView ? { scale: [1, 1.1, 1] } : {}}
-          transition={{ duration: 0.75, delay: 2.25, ease: "easeInOut" }}
-        >
-          <h3>Lunita Hermosa</h3>
-          
-          <button onClick={() => getProjectDetails(2)}>Learn More</button>
-        </motion.div>
-        <motion.div className="item3"
-          initial= {{scale: 0.8}}
-          animate={isInView ? { scale: [1, 1.1, 1] } : {}}
-          transition={{ duration: 0.75, delay: 2.75, ease: "easeInOut" }}
-        >
-          <h3>CSS Art</h3>
-          
-          <button onClick={() => getProjectDetails(3)}>Learn More</button>
-        </motion.div>
-        <motion.div className="item4"
-          initial= {{scale: 0.8}}
-          animate={isInView ? { scale: [1, 1.1, 1] } : {}}
-          transition={{ duration: 0.75, delay: 3.25, ease: "easeInOut" }}
-        >
-          <h3>Logo Generator</h3>
-          
-          <button onClick={() => getProjectDetails(4)}>Learn More</button>
-        </motion.div>
-        <motion.div className="item5"
-          initial= {{scale: 0.8}}
-          animate={isInView ? { scale: [1, 1.1, 1] } : {}}
-          transition={{ duration: 0.75, delay: 3.75, ease: "easeInOut"}}
-        >
-          <h3>Expense Tracking Application</h3>
-          <button onClick={() => getProjectDetails(5)}>Learn More</button>
-        </motion.div>
-      </section>
+      <motion.h2 initial={{ x: "-500px" }} whileInView={{ x: "0px" }} transition={{ duration: 0.8 }}>My Projects</motion.h2>
+
+      <motion.section className="expGrid" initial="hidden" whileInView="visible" transition={{staggerChildren: 0.3}}>
+      {
+        projects.map(( projectItem ) => (
+          <motion.div key={projectItem.id} className={`expItem ${projectItem.id % 5 === 0 ? "expandGrid" : ""}`} variants={listVariant}>
+            <img src={projectItem.image} alt={projectItem.title} />
+            <h3>{projectItem.title}</h3>
+            <button onClick={() => setProject(projectItem.id)}>Learn More</button>
+          </motion.div>
+        ))
+      }
+      </motion.section>
     </div>
   )
 }

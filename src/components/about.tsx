@@ -2,18 +2,9 @@ import GradPic from '/images/gradPic.jpeg';
 import P1 from '/images/p1.jpeg';
 import P2 from '/images/p2.jpeg';
 import P3 from '/images/p3.jpeg';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-
-
+import { motion } from 'framer-motion';
 
 export default function About() {
-  const aboutRef = useRef(null);
-  const aboutIsInView = useInView(aboutRef, { once: true });
-
-  const faqRef = useRef(null);
-  const faqIsInView = useInView(faqRef, { once: true });
-
   return (
     <section className="about" id='about'>
       <h2>About Me</h2>
@@ -39,10 +30,10 @@ export default function About() {
           </div>
         </div>
         <div className="aboutDetails">
-          <motion.section ref={aboutRef}
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
-            animate={aboutIsInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.75, ease: 'easeInOut' }}>
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}>
             <section>
                <h3>Introduction</h3>
               <p>My name is Anthony, but like to go by Gavi. Im a Front-End focused Developer with Back-End capabilities.</p>
@@ -64,10 +55,10 @@ export default function About() {
             </section>
           </motion.section>
           <hr style={{ margin: "2rem 0", color: "#ffd828" }} />
-          <motion.section ref={faqRef}
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
-            animate={faqIsInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 1, ease: 'easeInOut' }}>
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}>
             <h3>Frequently Asked Questions</h3>
             <p>Here are some common questions I get asked about my work and background.</p>
             <details>

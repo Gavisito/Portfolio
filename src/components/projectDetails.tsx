@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FaArrowLeft, FaArrowRight, FaRegWindowClose } from "react-icons/fa";
 
 interface Project {
@@ -20,13 +19,7 @@ interface ProjectDetailsProps extends Project {
 
 export default function ProjectDetails(project: ProjectDetailsProps) {
   return (
-    <motion.article className="projectDetails" id='projectDetails'
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
-      transition={{ duration: 0.75 }}
-      key={project.id}
-    >
+    <article className="projectDetails" id='projectDetails'>
       <hr />
       <nav className="navigationButtons">
         <button className="closeButton" onClick={project.onClose}> <FaRegWindowClose className="icon"/> <span>Close</span> </button>
@@ -56,7 +49,7 @@ export default function ProjectDetails(project: ProjectDetailsProps) {
             <p>{project.features}</p>
           </section>
           <section>
-           <h3>Results</h3>
+          <h3>Results</h3>
             <p>{project.results}</p>
           </section>
           <section>
@@ -70,6 +63,6 @@ export default function ProjectDetails(project: ProjectDetailsProps) {
         </div>
       </section>
       <hr />
-    </motion.article>
+    </article>
   )
 }

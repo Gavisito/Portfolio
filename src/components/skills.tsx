@@ -2,209 +2,114 @@ import { FaReact, FaJsSquare, FaCss3, FaHtml5, FaNodeJs, FaSass, FaPython, FaWix
 import { SiMongodb, SiTypescript, SiNextdotjs, SiTailwindcss, SiChartdotjs, SiExpress, SiMysql, SiPostman, SiContentful, SiVercel, SiVite, SiAdobelightroom} from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 
-import { useRef } from "react";
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 //import Spline from '@splinetool/react-spline';
 
 
 export default function Skills() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px"  });
 
+    const itemVariants = {
+        hidden: {opacity: 0, scale: 0.5, rotate: "-40deg"},
+        visible: {opacity: 1, scale: 1, rotate: "0deg"},
+    }
 
     return (
-        <section className="skills" id='skills' ref={ref}>
+        <section className="skills" id='skills'>
         
             <div className="topBar"></div>
 
             <motion.h2
                 initial={{ x: "-300px" }}
-                animate={isInView ? { x: "0px" } : {}}
+                animate={{ x: "0px" }}
                 transition={{ duration: 1.1 }}
             >My Skills</motion.h2>
 
             <motion.p
                 initial={{ x: "-800px" }}
-                animate={isInView ? { x: "0px" } : {}}
+                animate={{ x: "0px" }}
                 transition={{ duration: 1.1 }}
             >Here is a brief overview of my skills</motion.p>
-            <ul>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 0.75 }}
-                >
+            <motion.ul initial="hidden" whileInView="visible" transition={{staggerChildren: 0.2, type: "spring"}}>
+                <motion.li variants={itemVariants}>
                     <FaJsSquare className="logo"/> JavaScript
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 0.78 }}
-                >
+                <motion.li variants={itemVariants}>
                     <FaReact className="logo"/> React.js
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 0.80 }}
-                >
+                <motion.li variants={itemVariants}>
                     <FaCss3 className="logo"/> CSS3
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 0.82 }}
-                >
+                <motion.li variants={itemVariants}>
                     <FaHtml5 className="logo"/> HTML5
                 </motion.li>
 
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 0.84 }}
-                >
+                <motion.li variants={itemVariants}>
                     <FaNodeJs className="logo"/> Node.js
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 0.86 }}
-                >
+                <motion.li variants={itemVariants}>
                     <SiMongodb className="logo"/> MongoDB
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 0.88 }}
-                >
+                <motion.li variants={itemVariants}>
                     <SiTypescript className="logo"/> Typescript
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 0.90 }}
-                >
+                <motion.li variants={itemVariants}>
                     <SiNextdotjs className="logo"/> Next.js
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 0.92 }}
-                >
+                <motion.li variants={itemVariants} >
                     <FaSass className="logo"/> Sass
                 </motion.li>
                 
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 0.94 }}
-                >
+                <motion.li variants={itemVariants}>
                     <SiTailwindcss className="logo"/> Tailwind CSS
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 0.96 }}
-                >
+                <motion.li variants={itemVariants}>
                     <SiChartdotjs className="logo"/> Chart.js
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 0.98 }}
-                >
+                <motion.li variants={itemVariants}>
                     <FaPython className="logo"/> Python
                 </motion.li>
 
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 1.00 }}
-                >
+                <motion.li variants={itemVariants}>
                     <SiExpress className="logo"/> Express.js
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 1.02 }}
-                >
+                <motion.li variants={itemVariants}>
                     <SiMysql className="logo"/> MySQL
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 1.04 }}
-                >
+                <motion.li variants={itemVariants}>
                     <SiPostman className="logo"/> Postman
                 </motion.li>
 
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 1.06 }}
-                >
+                <motion.li variants={itemVariants}>
                     <FaWix className="logo"/> Wix
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 1.08 }}
-                >
+                <motion.li variants={itemVariants}>
                     <SiContentful className="logo"/> Contentful
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 1.10 }}
-                >
+                <motion.li variants={itemVariants}>
                     <FaGit className="logo"/> Git
                 </motion.li>
 
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 1.14 }}
-                >
+                <motion.li variants={itemVariants}>
                     <FaGithub className="logo"/> Github
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 1.16 }}
-                >
+                <motion.li variants={itemVariants}>
                     <SiVercel className="logo"/> Vercel
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 1.18 }}
-                >
+                <motion.li variants={itemVariants}>
                     <FaNpm className="logo"/> NPM
                 </motion.li>
 
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 1.20 }}
-                >
+                <motion.li variants={itemVariants}>
                     <SiVite className="logo"/> Vite.js
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 1.22 }}
-                >
+                <motion.li variants={itemVariants}>
                     <TbBrandFramerMotion className="logo"/> Framer Motion
                 </motion.li>
-                <motion.li
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.1, delay: 1.22 }}
-                >
+                <motion.li variants={itemVariants}>
                     <SiAdobelightroom className="logo"/> Adobe Lightroom
                 </motion.li>
-            </ul>
+            </motion.ul>
         </section>
     );
 }
