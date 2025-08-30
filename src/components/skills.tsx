@@ -45,9 +45,7 @@ export default function Skills() {
         
             <div className="topBar"></div>
 
-            <motion.h2 initial={{ x: "-300px" }} animate={{ x: "0px" }} transition={{ duration: 1.1 }}>
-                My Skills
-            </motion.h2>
+            <h2>My Skills</h2>
 
             <motion.p initial={{ x: "-800px" }} animate={{ x: "0px" }} transition={{ duration: 1.1 }}>
                 Here is a brief overview of my skills
