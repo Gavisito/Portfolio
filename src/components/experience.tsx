@@ -25,7 +25,7 @@ export default function Experience() {
   return (
 		<div className="experience" id="experience">
 		<hr />
-		<motion.h2 initial={{ x: "-500px" }} whileInView={{ x: "0px" }} transition={{ duration: 0.8 }}>My Projects</motion.h2>
+		<motion.h2 initial={{ x: "-500px" }} whileInView={{ x: "0px" }} transition={{ duration: 0.8 }} viewport={{ once: true, amount: 0.5 }}>My Projects</motion.h2>
 
 		<motion.section className="expGrid" initial="hidden" whileInView="visible" transition={{staggerChildren: 0.3}}>
 		{
