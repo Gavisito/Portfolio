@@ -1,7 +1,8 @@
 import type { IconType } from "react-icons";
 import { FaReact, FaJsSquare, FaCss3, FaHtml5, FaNodeJs, FaSass, FaPython, FaWix, FaGit, FaGithub, FaNpm} from "react-icons/fa";
-import { SiMongodb, SiTypescript, SiNextdotjs, SiTailwindcss, SiChartdotjs, SiExpress, SiMysql, SiPostman, SiContentful, SiVercel, SiVite, SiAdobelightroom} from "react-icons/si";
+import { SiMongodb, SiTypescript, SiNextdotjs, SiTailwindcss, SiChartdotjs, SiExpress, SiMysql, SiPostman, SiContentful, SiVercel, SiVite, SiAdobelightroom, SiRedux, SiReactquery, SiVitest} from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import { GiBearFace } from "react-icons/gi";
 
 import { motion } from 'framer-motion'
 
@@ -19,6 +20,10 @@ const icons: Record<string, IconType> = {
     Node: FaNodeJs,
     Express: SiExpress,
     ChartJs: SiChartdotjs,
+    Zustand: GiBearFace,
+    Redux: SiRedux,
+    ReactQuery: SiReactquery,
+    Vitest: SiVitest,
     Python: FaPython,
     MySQL: SiMysql,
     MongoDB: SiMongodb,
